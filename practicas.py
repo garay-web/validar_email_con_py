@@ -53,8 +53,16 @@ def validacion(email):
         array.append(i)
     
     array.reverse()
-    
-    index= array.index('@')
+
+    for i in array:
+        if i == '@':                  #-----------> Si es verdad : ...
+            index= array.index('@')
+        else:                         #-----------> Y si no es verdad : ...
+            print('\n Olvidaste escribir el @ en tu correo')
+        break
+
+    print('\n-------------\n')
+            
     
     del array [index+1:]
     email= False
